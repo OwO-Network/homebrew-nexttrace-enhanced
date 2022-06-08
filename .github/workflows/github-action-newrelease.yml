@@ -44,7 +44,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Send greeting
         run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      # - run: bash genFormula.sh
+      - run: bash genFormula.sh
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
