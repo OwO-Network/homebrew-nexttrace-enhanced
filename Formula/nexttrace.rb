@@ -1,8 +1,9 @@
 class Nexttrace < Formula
     desc "一款开源的可视化路由跟踪工具，使用 Golang 开发。\n这是NextTrace加强版，旨在提供高度可定制化的可视化 Traceroute 工具。"
     homepage ""
-    version "beta1"
-    url "https://github.com/OwO-Network/nexttrace-enhanced/archive/refs/heads/main.zip"
+    version "v0.1.7-beta.3"
+    url https://github.com/OwO-Network/nexttrace-enhanced/archive/refs/tags/v0.1.7-beta.3.tar.gz
+    md5 473699cfc65f382a489f8cc8521a51fb
     license "GPL-3.0"
 
     depends_on "go" => :build
