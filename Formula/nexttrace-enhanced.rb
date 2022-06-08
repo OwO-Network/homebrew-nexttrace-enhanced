@@ -7,10 +7,10 @@ class Nexttrace < Formula
     depends_on "go" => :build
   
     def install
-      system "go", "build", *std_go_args(ldflags: "-s -w")
+      system "go", "build","-o nexttrace-enhanced", *std_go_args(ldflags: "-s -w")
     end
   
     test do
-      assert_match "NextTrace", shell_output("#{bin}/nexttrace -V")
+      assert_match "NextTrace", shell_output("#{bin}/nexttrace-enhanced -V")
     end
   end
