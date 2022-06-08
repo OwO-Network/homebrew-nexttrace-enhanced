@@ -1,6 +1,6 @@
 # !/bin/bash
 export version=$(curl -s https://api.github.com/repos/owo-network/nexttrace-enhanced/releases/latest | jq ".name")
-md5=\"$(curl -sL https://github.com/OwO-Network/nexttrace-enhanced/archive/refs/tags/${version:1:-1}.tar.gz | md5sum | cut -f1 -d' ')\"
+sha256=\"$(curl -sL https://github.com/OwO-Network/nexttrace-enhanced/archive/refs/tags/${version:1:-1}.tar.gz | sha256sum | cut -f1 -d' ')\"
 url=\"https://github.com/OwO-Network/nexttrace-enhanced/archive/refs/tags/${version:1:-1}.tar.gz\"
 cat >Formula/nexttrace.rb <<EOF
 class Nexttrace < Formula
@@ -8,7 +8,7 @@ class Nexttrace < Formula
     homepage "https://github.com/OwO-Network/nexttrace-enhanced/"
     version ${version}
     url ${url}
-    md5 ${md5}
+    sha256 ${sha256}
     license "GPL-3.0"
 
     depends_on "go" => :build
