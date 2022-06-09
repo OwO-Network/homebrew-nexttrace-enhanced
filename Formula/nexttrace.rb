@@ -3,7 +3,7 @@ class Nexttrace < Formula
     homepage "https://github.com/OwO-Network/nexttrace-enhanced/"
     version "v0.1.7-beta.4"
     url "https://github.com/OwO-Network/nexttrace-enhanced/archive/refs/tags/v0.1.7-beta.4.tar.gz"
-    sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+    sha256 "d663ca63f9f61b6984ab910cbe92583724702f3e0cdd912f3c0ee677a7289c5a"
     license "GPL-3.0"
 
     depends_on "go" => :build
