@@ -13,6 +13,6 @@ class NexttraceDev < Formula
     end
   
     test do
-      assert_match "NextTrace", shell_output("#{bin}/nexttrace -V")
+      assert_match "NextTrace Enhanced", shell_output("#{bin}/nexttrace-dev -V")
     end
   end

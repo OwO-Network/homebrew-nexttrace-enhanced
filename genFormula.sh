@@ -26,7 +26,7 @@ url="https://github.com/OwO-Network/nexttrace-enhanced/archive/refs/heads/main.z
 sha256="$(curl -sL ${url} | sha256sum | cut -f1 -d' ')"
 version_withoutquo=${sha256:1:8}
 cat >Formula/nexttrace-dev.rb <<EOF
-class Nexttrace_dev < Formula
+class NexttraceDev < Formula
     desc "一款开源的可视化路由跟踪工具，使用 Golang 开发。\n这是NextTrace加强版，旨在提供高度可定制化的可视化 Traceroute 工具。\nDev通道"
     homepage "https://github.com/OwO-Network/nexttrace-enhanced/"
     version "${version_withoutquo}"
@@ -41,7 +41,7 @@ class Nexttrace_dev < Formula
     end
   
     test do
-      assert_match "NextTrace", shell_output("#{bin}/nexttrace -V")
+      assert_match "NextTrace Enhanced", shell_output("#{bin}/nexttrace-dev -V")
     end
   end
 EOF
