@@ -24,7 +24,10 @@ class Nexttrace < Formula
 EOF
 url="https://github.com/OwO-Network/nexttrace-enhanced/archive/refs/heads/main.zip"
 sha256="$(curl -sL ${url} | sha256sum | cut -f1 -d' ')"
-version_withoutquo=${sha256:1:8}
+current=`date "+%Y-%m-%d %H:%M:%S"`
+timeStamp=`date -d "$current" +%s` 
+currentTimeStamp=$(((timeStamp*1000+10#`date "+%N"`/1000000)/1000)) #将current转换为时间戳，精确到秒
+version_withoutquo=$currentTimeStamp
 cat >Formula/nexttrace-dev.rb <<EOF
 class NexttraceDev < Formula
     desc "一款开源的可视化路由跟踪工具，使用 Golang 开发。\n这是NextTrace加强版，旨在提供高度可定制化的可视化 Traceroute 工具。\nDev通道"
