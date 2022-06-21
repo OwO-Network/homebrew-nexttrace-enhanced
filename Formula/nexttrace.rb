@@ -1,15 +1,15 @@
 class Nexttrace < Formula
     desc "一款开源的可视化路由跟踪工具，使用 Golang 开发。\n这是NextTrace加强版，旨在提供高度可定制化的可视化 Traceroute 工具。"
     homepage "https://github.com/OwO-Network/nexttrace-enhanced/"
-    version "v0.1.9-beta.5"
-    url "https://github.com/OwO-Network/nexttrace-enhanced/archive/refs/tags/v0.1.9-beta.5.tar.gz"
-    sha256 "24aa4483e3881ea95db880a45f655dada124cc706f36ea9519f3c9badf7b0871"
+    version "v0.1.9-beta.6"
+    url "https://github.com/OwO-Network/nexttrace-enhanced/archive/refs/tags/v0.1.9-beta.6.tar.gz"
+    sha256 "23e0fc788c290cfee58901a9a7a72424f7589d5c1d9d2e87e09088c136e5a384"
     license "GPL-3.0"
 
     depends_on "go" => :build
   
     def install
-      system "go", "build", *std_go_args(ldflags: "-X 'github.com/xgadget-lab/nexttrace/printer.version=v0.1.9-beta.5' -s -w")
+      system "go", "build", *std_go_args(ldflags: "-X 'github.com/xgadget-lab/nexttrace/printer.version=v0.1.9-beta.6' -s -w")
     end
   
     test do
