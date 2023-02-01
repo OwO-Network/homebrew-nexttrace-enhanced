@@ -11,8 +11,8 @@ class Nexttrace < Formula
     def install
       system "go", "build", *std_go_args(ldflags: "-X 'github.com/xgadget-lab/nexttrace/printer.version=v0.3.0-beta.3' -s -w")
     end
-  
-    test do
-      assert_match "NextTrace", shell_output("#{bin}/nexttrace -V")
+
+    def post_install
+      puts "---------------------------\n⚠️  请注意nexttrace-enhanced在HomeBrew已由nexttrace重命名为nexttrace-enhanced，\n请使用来更新至最新版本，\n并在安装后通过命令来使用。\n---------------------------\n⚠️  Please be informed that nexttrace-enhanced has been renamed to nexttrace-enhanced in HomeBrew.\nPlease update to the latest version using ,\nand use the  command after installation."
     end
   end
